@@ -1,0 +1,733 @@
+{
+  "diseases": {
+    "Tomato___Bacterial_spot": {
+      "plant": "Tomate",
+      "disease_name": "Tache bactérienne",
+      "severity": "medium",
+      "confidence_threshold": 0.7,
+      "immediate_actions": [
+        "Retirer les feuilles infectées",
+        "Appliquer un fongicide à base de cuivre",
+        "Isoler la plante des autres plants"
+      ],
+      "prevention": [
+        "Éviter l'arrosage sur les feuilles",
+        "Espacer les plants (60-80 cm)",
+        "Pratiquer la rotation des cultures"
+      ],
+      "products": [
+        "Bouillie bordelaise",
+        "Sulfate de cuivre"
+      ],
+      "weather_alert": "Risque accru par temps humide et chaud (>25°C)"
+    },
+    "Tomato___Early_blight": {
+      "plant": "Tomate",
+      "disease_name": "Alternariose",
+      "severity": "medium",
+      "confidence_threshold": 0.7,
+      "immediate_actions": [
+        "Traiter avec un fongicide adapté",
+        "Supprimer les parties atteintes",
+        "Améliorer le drainage du sol"
+      ],
+      "prevention": [
+        "Pailler le sol pour éviter les éclaboussures",
+        "Assurer une bonne aération",
+        "Arroser tôt le matin"
+      ],
+      "products": [
+        "Fongicide systémique",
+        "Mancozèbe"
+      ],
+      "weather_alert": "Se développe avec alternance pluie/soleil"
+    },
+    "Tomato___Late_blight": {
+      "plant": "Tomate",
+      "disease_name": "Mildiou",
+      "severity": "high",
+      "confidence_threshold": 0.6,
+      "immediate_actions": [
+        "ACTION URGENTE : Appliquer un fongicide immédiatement",
+        "Détruire les plants très atteints (brûler)",
+        "Cesser tout arrosage foliaire",
+        "Isoler la zone infectée"
+      ],
+      "prevention": [
+        "Surveiller la météo (humidité >70%)",
+        "Traitement préventif avant les pluies",
+        "Éviter l'eau stagnante",
+        "Espacer généreusement les plants"
+      ],
+      "products": [
+        "Bouillie bordelaise (cuivre)",
+        "Aliette",
+        "Manèbe"
+      ],
+      "weather_alert": "ALERTE : Risque maximal avec humidité >90% et température 15-25°C"
+    },
+    "Tomato___Leaf_Mold": {
+      "plant": "Tomate",
+      "disease_name": "Moisissure des feuilles",
+      "severity": "low",
+      "confidence_threshold": 0.7,
+      "immediate_actions": [
+        "Améliorer la ventilation",
+        "Réduire l'humidité ambiante",
+        "Retirer les feuilles basses"
+      ],
+      "prevention": [
+        "Espacer les plants (60-80 cm)",
+        "Cultiver en serre bien ventilée",
+        "Éviter l'excès d'azote"
+      ],
+      "products": [
+        "Soufre mouillable",
+        "Fongicide léger si nécessaire"
+      ],
+      "weather_alert": "Favorisé par humidité élevée en serre"
+    },
+    "Tomato___Septoria_leaf_spot": {
+      "plant": "Tomate",
+      "disease_name": "Septoriose",
+      "severity": "medium",
+      "confidence_threshold": 0.7,
+      "immediate_actions": [
+        "Enlever les feuilles touchées",
+        "Appliquer un fongicide si extension",
+        "Nettoyer les débris végétaux"
+      ],
+      "prevention": [
+        "Rotation des cultures (3 ans minimum)",
+        "Paillage propre",
+        "Désinfecter les outils de taille"
+      ],
+      "products": [
+        "Chlorothalonil",
+        "Mancozèbe"
+      ],
+      "weather_alert": "Se propage par éclaboussures de pluie"
+    },
+    "Tomato___Spider_mites": {
+      "plant": "Tomate",
+      "disease_name": "Acariens (tétranyques)",
+      "severity": "medium",
+      "confidence_threshold": 0.75,
+      "immediate_actions": [
+        "Douche d'eau froide sous les feuilles",
+        "Appliquer un savon insecticide",
+        "Introduire des prédateurs naturels (si possible)"
+      ],
+      "prevention": [
+        "Maintenir une humidité suffisante",
+        "Éviter le stress hydrique",
+        "Surveillance régulière des feuilles"
+      ],
+      "products": [
+        "Savon noir",
+        "Huile de neem",
+        "Acaricide si grave"
+      ],
+      "weather_alert": "Prolifèrent en conditions chaudes et sèches"
+    },
+    "Tomato___Target_Spot": {
+      "plant": "Tomate",
+      "disease_name": "Tache concentrique",
+      "severity": "medium",
+      "confidence_threshold": 0.7,
+      "immediate_actions": [
+        "Appliquer un fongicide adapté",
+        "Supprimer les feuilles atteintes",
+        "Améliorer la circulation de l'air"
+      ],
+      "prevention": [
+        "Rotation des cultures",
+        "Éviter l'humidité excessive",
+        "Utiliser des plants certifiés sains"
+      ],
+      "products": [
+        "Azoxystrobine",
+        "Chlorothalonil"
+      ],
+      "weather_alert": "Favorisé par temps chaud et humide"
+    },
+    "Tomato___Mosaic_virus": {
+      "plant": "Tomate",
+      "disease_name": "Virus de la mosaïque",
+      "severity": "high",
+      "confidence_threshold": 0.65,
+      "immediate_actions": [
+        "DÉTRUIRE le plant immédiatement (brûler)",
+        "Désinfecter tous les outils utilisés",
+        "Isoler la zone et surveiller les plants voisins",
+        "Ne pas composter le plant"
+      ],
+      "prevention": [
+        "Utiliser des plants certifiés",
+        "Lutter contre les pucerons vecteurs",
+        "Ne pas fumer près des cultures (tabac = vecteur)",
+        "Désinfecter les mains après manipulation"
+      ],
+      "products": [
+        "Aucun traitement curatif disponible",
+        "Insecticide contre pucerons (prévention)"
+      ],
+      "weather_alert": "Virus stable, non lié à la météo"
+    },
+    "Tomato___Yellow_Leaf_Curl_Virus": {
+      "plant": "Tomate",
+      "disease_name": "Virus du jaunissement",
+      "severity": "high",
+      "confidence_threshold": 0.65,
+      "immediate_actions": [
+        "Enlever et détruire les plants infectés",
+        "Contrôler les mouches blanches (vecteur)",
+        "Installer des filets anti-insectes"
+      ],
+      "prevention": [
+        "Utiliser des variétés résistantes",
+        "Pièges collants jaunes contre mouches blanches",
+        "Rotation des cultures",
+        "Éliminer les mauvaises herbes hôtes"
+      ],
+      "products": [
+        "Aucun traitement curatif",
+        "Insecticide contre mouches blanches"
+      ],
+      "weather_alert": "Virus transmis par insectes, actif toute l'année en climat chaud"
+    },
+    "Tomato___healthy": {
+      "plant": "Tomate",
+      "disease_name": "Plante saine",
+      "severity": "none",
+      "confidence_threshold": 0.8,
+      "immediate_actions": [
+        "Aucune action nécessaire",
+        "Continuer l'entretien normal",
+        "Surveillance régulière"
+      ],
+      "prevention": [
+        "Maintenir l'arrosage régulier",
+        "Fertilisation NPK équilibrée",
+        "Tailler les gourmands si nécessaire"
+      ],
+      "products": [],
+      "weather_alert": "Maintenir les bonnes pratiques culturales"
+    },
+    "Potato___Early_blight": {
+      "plant": "Pomme de terre",
+      "disease_name": "Alternariose",
+      "severity": "medium",
+      "confidence_threshold": 0.7,
+      "immediate_actions": [
+        "Appliquer un fongicide systémique",
+        "Butter les plants pour protéger les tubercules",
+        "Éliminer le feuillage atteint"
+      ],
+      "prevention": [
+        "Rotation longue (4 ans minimum)",
+        "Utiliser des variétés résistantes",
+        "Fertilisation équilibrée (éviter excès azote)"
+      ],
+      "products": [
+        "Mancozèbe",
+        "Chlorothalonil"
+      ],
+      "weather_alert": "Favorisé par alternance pluie/chaleur"
+    },
+    "Potato___Late_blight": {
+      "plant": "Pomme de terre",
+      "disease_name": "Mildiou",
+      "severity": "high",
+      "confidence_threshold": 0.6,
+      "immediate_actions": [
+        "TRAITEMENT URGENT : Fongicide immédiat",
+        "Détruire les fanes très atteintes",
+        "Récolte anticipée possible si stade avancé",
+        "Ne pas stocker tubercules suspects"
+      ],
+      "prevention": [
+        "Traitement préventif avant saison humide",
+        "Surveillance météo (DSV - avertissement agricole)",
+        "Plants certifiés uniquement",
+        "Butter haut pour protéger tubercules"
+      ],
+      "products": [
+        "Cymoxanil",
+        "Métalaxyl",
+        "Fluazinam"
+      ],
+      "weather_alert": "ALERTE MAXIMALE : Humidité >90%, T° 10-25°C pendant 48h"
+    },
+    "Potato___healthy": {
+      "plant": "Pomme de terre",
+      "disease_name": "Culture saine",
+      "severity": "none",
+      "confidence_threshold": 0.8,
+      "immediate_actions": [
+        "Aucune action nécessaire",
+        "Surveillance régulière"
+      ],
+      "prevention": [
+        "Buttage progressif",
+        "Arrosage au sol (éviter feuillage)",
+        "Rotation des cultures (4 ans)"
+      ],
+      "products": [],
+      "weather_alert": "Maintenir surveillance régulière"
+    },
+    "Pepper,_bell___Bacterial_spot": {
+      "plant": "Poivron",
+      "disease_name": "Tache bactérienne",
+      "severity": "medium",
+      "confidence_threshold": 0.7,
+      "immediate_actions": [
+        "Appliquer fongicide à base de cuivre",
+        "Retirer les feuilles atteintes",
+        "Réduire l'humidité"
+      ],
+      "prevention": [
+        "Utiliser des semences saines certifiées",
+        "Rotation des cultures (3 ans)",
+        "Éviter l'arrosage aérien"
+      ],
+      "products": [
+        "Bouillie bordelaise",
+        "Oxychlorure de cuivre"
+      ],
+      "weather_alert": "Se propage par pluie et température >25°C"
+    },
+    "Pepper,_bell___healthy": {
+      "plant": "Poivron",
+      "disease_name": "Plant sain",
+      "severity": "none",
+      "confidence_threshold": 0.8,
+      "immediate_actions": [
+        "Continuer l'entretien normal"
+      ],
+      "prevention": [
+        "Arrosage régulier au sol",
+        "Fertilisation NPK équilibrée",
+        "Tuteurage si nécessaire"
+      ],
+      "products": [],
+      "weather_alert": "Maintenir bonnes pratiques"
+    },
+    "Apple___Apple_scab": {
+      "plant": "Pommier",
+      "disease_name": "Tavelure",
+      "severity": "medium",
+      "confidence_threshold": 0.7,
+      "immediate_actions": [
+        "Appliquer fongicide dès apparition",
+        "Ramasser et détruire les feuilles mortes",
+        "Tailler les zones atteintes"
+      ],
+      "prevention": [
+        "Choisir variétés résistantes",
+        "Assurer bonne aération de la couronne",
+        "Traitement préventif au débourrement"
+      ],
+      "products": [
+        "Dithianon",
+        "Captane",
+        "Dodine"
+      ],
+      "weather_alert": "Infection lors pluies au printemps (T° 15-25°C)"
+    },
+    "Apple___Black_rot": {
+      "plant": "Pommier",
+      "disease_name": "Pourriture noire",
+      "severity": "high",
+      "confidence_threshold": 0.65,
+      "immediate_actions": [
+        "Tailler et brûler les parties infectées",
+        "Détruire les fruits momifiés",
+        "Appliquer fongicide à base de cuivre"
+      ],
+      "prevention": [
+        "Éliminer toutes les momies en hiver",
+        "Taille sanitaire annuelle",
+        "Éviter les blessures sur l'arbre"
+      ],
+      "products": [
+        "Bouillie bordelaise",
+        "Thirame"
+      ],
+      "weather_alert": "Favorisé par temps chaud et humide en été"
+    },
+    "Apple___Cedar_apple_rust": {
+      "plant": "Pommier",
+      "disease_name": "Rouille grillagée",
+      "severity": "low",
+      "confidence_threshold": 0.7,
+      "immediate_actions": [
+        "Appliquer fongicide au printemps",
+        "Surveiller les genévriers environnants"
+      ],
+      "prevention": [
+        "Éloigner les genévriers (hôte alternatif)",
+        "Utiliser variétés résistantes",
+        "Traitement précoce au débourrement"
+      ],
+      "products": [
+        "Myclobutanil",
+        "Soufre"
+      ],
+      "weather_alert": "Infection au printemps lors des pluies"
+    },
+    "Apple___healthy": {
+      "plant": "Pommier",
+      "disease_name": "Arbre sain",
+      "severity": "none",
+      "confidence_threshold": 0.8,
+      "immediate_actions": [
+        "Continuer surveillance régulière"
+      ],
+      "prevention": [
+        "Taille d'entretien annuelle",
+        "Fertilisation équilibrée",
+        "Surveillance des parasites"
+      ],
+      "products": [],
+      "weather_alert": "Maintenir bonnes pratiques"
+    },
+    "Blueberry___healthy": {
+      "plant": "Myrtille",
+      "disease_name": "Plant sain",
+      "severity": "none",
+      "confidence_threshold": 0.8,
+      "immediate_actions": [
+        "Maintenir routine d'entretien"
+      ],
+      "prevention": [
+        "Maintenir sol acide (pH 4.5-5.5)",
+        "Paillage adapté (écorce pin)",
+        "Arrosage régulier (eau non calcaire)"
+      ],
+      "products": [],
+      "weather_alert": "Maintenir acidité du sol"
+    },
+    "Cherry_(including_sour)___Powdery_mildew": {
+      "plant": "Cerisier",
+      "disease_name": "Oïdium",
+      "severity": "medium",
+      "confidence_threshold": 0.7,
+      "immediate_actions": [
+        "Appliquer soufre mouillable",
+        "Tailler les pousses atteintes",
+        "Améliorer l'aération"
+      ],
+      "prevention": [
+        "Taille aérée de la couronne",
+        "Éviter excès d'azote",
+        "Traitement précoce si historique"
+      ],
+      "products": [
+        "Soufre",
+        "Bicarbonate de potassium"
+      ],
+      "weather_alert": "Favorisé par temps sec et chaud"
+    },
+    "Cherry_(including_sour)___healthy": {
+      "plant": "Cerisier",
+      "disease_name": "Arbre sain",
+      "severity": "none",
+      "confidence_threshold": 0.8,
+      "immediate_actions": [
+        "Entretien habituel"
+      ],
+      "prevention": [
+        "Taille après récolte",
+        "Protection contre oiseaux",
+        "Fertilisation modérée"
+      ],
+      "products": [],
+      "weather_alert": "Surveillance régulière"
+    },
+    "Corn_(maize)___Cercospora_leaf_spot": {
+      "plant": "Maïs",
+      "disease_name": "Cercosporiose",
+      "severity": "medium",
+      "confidence_threshold": 0.7,
+      "immediate_actions": [
+        "Fongicide si sévère",
+        "Rotation des cultures",
+        "Éliminer résidus de culture"
+      ],
+      "prevention": [
+        "Hybrides résistants",
+        "Rotation minimum 2 ans",
+        "Labour des résidus"
+      ],
+      "products": [
+        "Azoxystrobine",
+        "Propiconazole"
+      ],
+      "weather_alert": "Se développe par temps chaud et humide"
+    },
+    "Corn_(maize)___Common_rust": {
+      "plant": "Maïs",
+      "disease_name": "Rouille commune",
+      "severity": "low",
+      "confidence_threshold": 0.75,
+      "immediate_actions": [
+        "Surveillance uniquement si léger",
+        "Fongicide si extension importante"
+      ],
+      "prevention": [
+        "Variétés résistantes",
+        "Semis à date optimale",
+        "Fertilisation équilibrée"
+      ],
+      "products": [
+        "Triazole (si nécessaire)"
+      ],
+      "weather_alert": "Favorisé par rosées fraîches (15-20°C)"
+    },
+    "Corn_(maize)___Northern_Leaf_Blight": {
+      "plant": "Maïs",
+      "disease_name": "Helminthosporiose",
+      "severity": "medium",
+      "confidence_threshold": 0.7,
+      "immediate_actions": [
+        "Fongicide foliaire",
+        "Rotation stricte des cultures",
+        "Enfouir les résidus"
+      ],
+      "prevention": [
+        "Hybrides résistants",
+        "Rotation des cultures",
+        "Gestion des résidus"
+      ],
+      "products": [
+        "Pyraclostrobine",
+        "Tébuconazole"
+      ],
+      "weather_alert": "Infection par temps frais et humide (18-27°C)"
+    },
+    "Corn_(maize)___healthy": {
+      "plant": "Maïs",
+      "disease_name": "Culture saine",
+      "severity": "none",
+      "confidence_threshold": 0.8,
+      "immediate_actions": [
+        "Suivi normal"
+      ],
+      "prevention": [
+        "Rotation des cultures",
+        "Fertilisation NPK adaptée",
+        "Désherbage"
+      ],
+      "products": [],
+      "weather_alert": "Maintenir bonnes pratiques"
+    },
+    "Grape___Black_rot": {
+      "plant": "Vigne",
+      "disease_name": "Pourriture noire",
+      "severity": "high",
+      "confidence_threshold": 0.65,
+      "immediate_actions": [
+        "Fongicide systémique immédiat",
+        "Enlever et brûler les momies",
+        "Tailler les zones infectées"
+      ],
+      "prevention": [
+        "Taille aérée",
+        "Ramasser tous les fruits momifiés",
+        "Traitement préventif dès débourrement"
+      ],
+      "products": [
+        "Myclobutanil",
+        "Tébuconazole",
+        "Difénoconazole"
+      ],
+      "weather_alert": "Infection lors de pluies au printemps (15-25°C)"
+    },
+    "Grape___Esca_(Black_Measles)": {
+      "plant": "Vigne",
+      "disease_name": "Esca (maladie du bois)",
+      "severity": "high",
+      "confidence_threshold": 0.6,
+      "immediate_actions": [
+        "Tailler le bois malade (curetage)",
+        "Protéger les plaies de taille",
+        "PAS de traitement curatif efficace"
+      ],
+      "prevention": [
+        "Taille sanitaire douce",
+        "Désinfecter les outils",
+        "Éviter le stress hydrique",
+        "Mastiquer les plaies"
+      ],
+      "products": [
+        "Aucun traitement curatif disponible",
+        "Trichoderma (biocontrôle expérimental)"
+      ],
+      "weather_alert": "Maladie de faiblesse, éviter stress"
+    },
+    "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": {
+      "plant": "Vigne",
+      "disease_name": "Brûlure des feuilles",
+      "severity": "medium",
+      "confidence_threshold": 0.7,
+      "immediate_actions": [
+        "Appliquer fongicide à base de cuivre",
+        "Effeuillage raisonné autour grappes",
+        "Améliorer aération"
+      ],
+      "prevention": [
+        "Palissage aéré",
+        "Éviter humidité excessive",
+        "Variétés moins sensibles"
+      ],
+      "products": [
+        "Bouillie bordelaise",
+        "Hydroxyde de cuivre"
+      ],
+      "weather_alert": "Favorisé par humidité et chaleur"
+    },
+    "Grape___healthy": {
+      "plant": "Vigne",
+      "disease_name": "Vigne saine",
+      "severity": "none",
+      "confidence_threshold": 0.8,
+      "immediate_actions": [
+        "Entretien normal"
+      ],
+      "prevention": [
+        "Taille équilibrée",
+        "Palissage adapté",
+        "Traitements préventifs selon pression"
+      ],
+      "products": [],
+      "weather_alert": "Surveillance mildiou/oïdium selon météo"
+    },
+    "Peach___Bacterial_spot": {
+      "plant": "Pêcher",
+      "disease_name": "Tache bactérienne",
+      "severity": "medium",
+      "confidence_threshold": 0.7,
+      "immediate_actions": [
+        "Appliquer fongicide cuivré",
+        "Tailler les branches atteintes",
+        "Améliorer l'aération"
+      ],
+      "prevention": [
+        "Variétés résistantes",
+        "Éviter les blessures",
+        "Taille sanitaire"
+      ],
+      "products": [
+        "Bouillie bordelaise",
+        "Oxychlorure de cuivre"
+      ],
+      "weather_alert": "Se propage par pluie au printemps"
+    },
+    "Peach___healthy": {
+      "plant": "Pêcher",
+      "disease_name": "Arbre sain",
+      "severity": "none",
+      "confidence_threshold": 0.8,
+      "immediate_actions": [
+        "Suivi régulier"
+      ],
+      "prevention": [
+        "Taille fruitière annuelle",
+        "Éclaircissage des fruits",
+        "Fertilisation adaptée"
+      ],
+      "products": [],
+      "weather_alert": "Surveillance cloque du pêcher au printemps"
+    },
+    "Raspberry___healthy": {
+      "plant": "Framboisier",
+      "disease_name": "Plant sain",
+      "severity": "none",
+      "confidence_threshold": 0.8,
+      "immediate_actions": [
+        "Entretien habituel"
+      ],
+      "prevention": [
+        "Taille annuelle des cannes",
+        "Paillage",
+        "Éclaircissement si densité excessive"
+      ],
+      "products": [],
+      "weather_alert": "Maintenir bonnes pratiques"
+    },
+    "Soybean___healthy": {
+      "plant": "Soja",
+      "disease_name": "Culture saine",
+      "severity": "none",
+      "confidence_threshold": 0.8,
+      "immediate_actions": [
+        "Continuer suivi"
+      ],
+      "prevention": [
+        "Rotation des cultures",
+        "Semis à bonne date",
+        "Désherbage"
+      ],
+      "products": [],
+      "weather_alert": "Surveillance régulière"
+    },
+    "Squash___Powdery_mildew": {
+      "plant": "Courge",
+      "disease_name": "Oïdium",
+      "severity": "medium",
+      "confidence_threshold": 0.7,
+      "immediate_actions": [
+        "Appliquer soufre ou bicarbonate de potassium",
+        "Améliorer aération entre plants",
+        "Arroser tôt le matin"
+      ],
+      "prevention": [
+        "Espacer les plants (1-1.5m)",
+        "Éviter excès d'azote",
+        "Variétés résistantes si disponibles"
+      ],
+      "products": [
+        "Soufre mouillable",
+        "Bicarbonate de potassium"
+      ],
+      "weather_alert": "Se développe par temps sec et chaud"
+    },
+    "Strawberry___Leaf_scorch": {
+      "plant": "Fraisier",
+      "disease_name": "Brûlure des feuilles",
+      "severity": "medium",
+      "confidence_threshold": 0.7,
+      "immediate_actions": [
+        "Retirer et détruire les feuilles atteintes",
+        "Fongicide si nécessaire",
+        "Améliorer le drainage"
+      ],
+      "prevention": [
+        "Utiliser plants certifiés",
+        "Rotation des cultures",
+        "Éviter surpeuplement"
+      ],
+      "products": [
+        "Captane",
+        "Chlorothalonil"
+      ],
+      "weather_alert": "Favorisé par humidité excessive"
+    },
+    "Strawberry___healthy": {
+      "plant": "Fraisier",
+      "disease_name": "Plants sains",
+      "severity": "none",
+      "confidence_threshold": 0.8,
+      "immediate_actions": [
+        "Entretien habituel"
+      ],
+      "prevention": [
+        "Paillage propre",
+        "Renouvellement plantation (3-4 ans)",
+        "Arrosage goutte-à-goutte préférable"
+      ],
+      "products": [],
+      "weather_alert": "Surveiller oïdium et pourriture"
+    }
+  }}
