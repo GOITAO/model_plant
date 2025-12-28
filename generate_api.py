@@ -7,6 +7,7 @@ from PIL import Image
 import io
 from typing import Dict
 import uvicorn
+from Recommender import recommend
 
 app = FastAPI(
     title="Plant Disease Detection API",
@@ -112,58 +113,54 @@ async def get_classes():
     }
 
 
+
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
-    """
-    Prédit la maladie de la plante à partir d'une image
-    
-    Args:
-        file: Image de la plante (JPG, PNG, etc.)
-    
-    Returns:
-        JSON avec la classe prédite, la confiance et toutes les probabilités
-    """
     if MODEL is None or CLASS_NAMES is None:
         raise HTTPException(status_code=503, detail="Modèle non chargé")
     
-    # Vérifie le type de fichier
     if not file.content_type.startswith("image/"):
         raise HTTPException(status_code=400, detail="Le fichier doit être une image")
     
     try:
-        # Lit le contenu du fichier
+        # Lire et prétraiter l'image
         image_bytes = await file.read()
-        
-        # Prétraite l'image
         input_arr = preprocess_image(image_bytes)
         
-        # Fait la prédiction
+        # Faire la prédiction
         predictions = MODEL.predict(input_arr, verbose=0)
-        
-        # Récupère la classe prédite
         idx = int(np.argmax(predictions[0]))
         predicted_class = CLASS_NAMES[idx]
         confidence = float(predictions[0][idx])
         
-        # Crée un dictionnaire avec toutes les probabilités
-        all_predictions = {
-            CLASS_NAMES[i]: float(predictions[0][i])
-            for i in range(len(CLASS_NAMES))
-        }
+        # Obtenir les recommandations basées sur le label prédit
+        rec = recommend(predicted_class, confidence)
         
-        # Trie par confiance décroissante
-        sorted_predictions = dict(
-            sorted(all_predictions.items(), key=lambda x: x[1], reverse=True)
-        )
+        # Vérifier le status de la recommandation
+        if rec["status"] != "ok":
+            return {
+                "success": False,
+                "message": rec.get("message", "Erreur inconnue"),
+                "confidence": confidence
+            }
         
-        return {
+        # Construire la réponse finale pour le frontend
+        response = {
             "success": True,
-            "predicted_class": predicted_class,
+            "plant": rec["plant"],
+            "disease": rec["disease_name"],
+            "severity": rec["severity"],
             "confidence": round(confidence * 100, 2),
-            "all_predictions": sorted_predictions,
+            "description": rec.get("description", ""),
+            "recommendations": rec.get("immediate_actions", []),
+            "prevention": rec.get("prevention", ""),
+            "products": rec.get("products", []),
+            "weather_alert": rec.get("weather_alert", ""),
             "filename": file.filename
         }
         
+        return response
+    
     except HTTPException:
         raise
     except Exception as e:
